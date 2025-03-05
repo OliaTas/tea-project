@@ -1,0 +1,12 @@
+<div class="col">
+    <div class="card">
+        <a  class="card-image" *ngIf="product.image">
+            <img src="{{product.image}}" class="card-img-top" alt="Image1">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text fs-6">{{product.description | shortenDescription}}</p>
+            <a href="#" class="btn btn-primary btn-group" [routerLink]="['/products', product.id]">Подробнее</a>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper app-root article {
+    min-height: 100vh;
+}
 
 .container {
     max-width: 1318px;
@@ -226,8 +236,9 @@ footer.navbar-brand {
     background: #0000005a;
 }
 
-.g-4 .loader-bg , .gy-4 .loader-bg  {
-     --bs-gutter-y: 0;
+.g-4 .loader-bg,
+.gy-4 .loader-bg {
+    --bs-gutter-y: 0;
 }
 
 

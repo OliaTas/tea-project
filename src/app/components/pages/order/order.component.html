@@ -1,5 +1,6 @@
 <article class="container py-5" id="order">
-    <form class=" col-lg-6 row g-3 m-auto" id="form" *ngIf="!orderSuccess" [formGroup]="checkoutForm">
+    <form class=" col-lg-6 row g-3 m-auto" id="form" *ngIf="!orderSuccess"
+     [formGroup]="checkoutForm"  (ngSubmit)="createOrder()">
         <h2 class="py-5 m-0 text-center font-weight-bold fs-2">Сделать заказ</h2>
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Имя</label>
@@ -82,7 +83,7 @@
             <input type="text" class="form-control" id="validationCustom07" formControlName="comment">
         </div>
         <div class="col-12">
-            <button class="btn btn-primary" id="formButton" type="submit" [disabled]="checkoutForm.invalid" (click)="createOrder()">Отправить
+            <button class="btn btn-primary" id="formButton" [disabled]="checkoutForm.invalid">Отправить
                 форму</button>
             <div *ngIf="errorMessage" class="text-danger mt-2">{{errorMessage}}</div>
         </div>

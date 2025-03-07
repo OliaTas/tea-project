@@ -1,0 +1,30 @@
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-5" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ">
+                    <li class="nav-item">
+                        <a [routerLink]="'/'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+                            class="nav-link active" aria-current="page" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="'/products'" routerLinkActive="active" class="nav-link" href="#">Каталог</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" (ngSubmit)="onSearch()">
+                    <input class="form-control  py-2 px-3 mr-3" type="search" placeholder="Поиск чая" aria-label="Поиск"
+                        [(ngModel)]="searchQuery" name="searchQuery">
+                    <button class="btn btn-outline-primary py-2 px-4">Найти</button>
+                    <button *ngIf="searchQuery" class="btn btn-outline-danger py-2 px-4 hvr-shrink ms-2" type="button"
+                        (click)="resetSearch()">Сбросить</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>

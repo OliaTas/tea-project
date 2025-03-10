@@ -11,14 +11,28 @@ body {
 
 html,
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+router-outlet app-product{
+  padding-bottom: 90px;
+}
+footer-component footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
 }
 
-.wrapper app-root article {
-    min-height: 100vh;
-}
+// .wrapper app-root article {
+//     min-height: 100vh;
+// }
 
 .container {
     max-width: 1318px;
@@ -30,7 +44,10 @@ body {
     background: #F8F9FA;
 }
 
-
+.product-item {
+    padding-top: 2rem !important;
+    padding-bottom: 6rem !important;
+}
 
 .nav-link.active {
     color: #000;
@@ -204,9 +221,9 @@ p {
     margin-bottom: 10px;
 }
 
-footer {
-    height: 56px;
-}
+// footer {
+//     height: 56px;
+// }
 
 footer.navbar-brand {
     padding: 19px 0 19px 15px;
@@ -239,6 +256,11 @@ footer.navbar-brand {
 .g-4 .loader-bg,
 .gy-4 .loader-bg {
     --bs-gutter-y: 0;
+}
+
+#order {
+    padding-top: 3rem !important;
+    padding-bottom: 6rem !important;
 }
 
 
